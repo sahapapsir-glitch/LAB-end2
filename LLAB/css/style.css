@@ -2836,3 +2836,189 @@ body > *:not(nav):not(.banner) :not(.background-image) {
         gap: 10px;
     }
 }
+
+/* =========================================
+   Team Page Styles
+   ========================================= */
+
+/* --- 1. Team Banner Section --- */
+.team-banner-section {
+    width: 100%;
+    height: 60vh;
+    /* แนะนำให้เซฟรูปภาพแรกที่ครอบเฉพาะขนมปังและพื้นหลังไว้ชื่อ team-banner.jpg */
+    background: url('../images/team-banner.png') no-repeat center center;
+    background-size: cover;
+    background-color: #eabfa6; /* สีพื้นหลังสำรอง */
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+}
+
+.team-banner-content h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.team-banner-content p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 200px;
+}
+
+/* --- 2. Team Info Section --- */
+.team-info-section {
+    padding: 60px 5%;
+    background-color: #ffffff;
+}
+
+.team-info-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.team-info-text {
+    flex: 1;
+    background-color: #ebdcb9; /* สีครีมตามรูปภาพ */
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-info-text h2 {
+    font-size: 2rem;
+    color: #4a2a0e;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.team-info-text p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.team-info-image {
+    flex: 1;
+}
+
+.team-info-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- 3. Meet Our Bakers Section --- */
+.team-members-section {
+    padding: 20px 5% 80px;
+    background-color: #ffffff;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-header h2 {
+    font-size: 3rem;
+    color: #3d1a04;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.team-header p {
+    font-size: 1.1rem;
+    color: #6a3b14;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background-color: #ebdcb9; /* สีครีมเดียวกับด้านบน */
+    padding: 15px 15px 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5; /* ทำรูปให้เป็นแนวตั้งนิดๆ ตามต้นฉบับ */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.team-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    color: #3d1a04;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.team-card p {
+    color: #333;
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.team-card .role {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* --- Responsive สำหรับหน้าจอมือถือ --- */
+@media (max-width: 900px) {
+    .team-info-container {
+        flex-direction: column;
+    }
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team-banner-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-banner-section {
+        padding-left: 5%;
+    }
+    .team-banner-content h1 {
+        font-size: 2rem;
+    }
+}
